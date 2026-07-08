@@ -9,7 +9,7 @@ jobs:
    runs-on: macos-latest
 
    steps:
-      - uses: actions/checkout@v2
+      - uses: actions/upload-artifact@v4
       - name: Build
         run: |
           xcodebuild clean build ONLY_ACTIVE_ARCH=NO PRODUCT_BUNDLE_IDENTIFIER='dev.manticore.manticore' CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED="NO" -sdk iphoneos -scheme manticore -configuration Debug -derivedDataPath build
